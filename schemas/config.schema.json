@@ -506,6 +506,28 @@
             "type": "string"
           },
           "description": "List of MQTT topics to subscribe to. Wildcard characters '#' and '+' are supported."
+        },
+        "tls_enabled": {
+          "type": "boolean",
+          "description": "Enable TLS/SSL for the MQTT connection (MQTTS). Defaults to false.",
+          "default": false
+        },
+        "tls_ca_cert": {
+          "type": ["string", "null"],
+          "description": "Path to CA certificate file for server verification. Uses system CAs if not set."
+        },
+        "tls_certfile": {
+          "type": ["string", "null"],
+          "description": "Path to client certificate file for mutual TLS authentication."
+        },
+        "tls_keyfile": {
+          "type": ["string", "null"],
+          "description": "Path to client private key file for mutual TLS authentication."
+        },
+        "tls_insecure": {
+          "type": "boolean",
+          "description": "Disable server certificate hostname verification. Use only for testing with self-signed certs.",
+          "default": false
         }
       },
       "additionalProperties": false,
