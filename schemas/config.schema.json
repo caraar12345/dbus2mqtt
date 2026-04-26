@@ -509,25 +509,23 @@
         },
         "tls_enabled": {
           "type": "boolean",
-          "description": "Enable TLS/SSL for the MQTT connection (MQTTS). Defaults to false.",
-          "default": false
+          "description": "Enable TLS/SSL for the MQTT connection (MQTTS). Defaults to False."
         },
         "tls_ca_cert": {
-          "type": ["string", "null"],
+          "type": "string",
           "description": "Path to CA certificate file for server verification. Uses system CAs if not set."
         },
         "tls_certfile": {
-          "type": ["string", "null"],
+          "type": "string",
           "description": "Path to client certificate file for mutual TLS authentication."
         },
         "tls_keyfile": {
-          "type": ["string", "null"],
+          "type": "string",
           "description": "Path to client private key file for mutual TLS authentication."
         },
         "tls_insecure": {
           "type": "boolean",
-          "description": "Disable server certificate hostname verification. Use only for testing with self-signed certs.",
-          "default": false
+          "description": "Disable server certificate hostname verification. Use only for testing with self-signed certs."
         }
       },
       "additionalProperties": false,
