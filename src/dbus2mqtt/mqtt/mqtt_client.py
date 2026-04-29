@@ -51,7 +51,7 @@ class MqttClient:
 
         if self.config.tls_enabled:
             self.client.tls_set(
-                ca_certs=self.config.tls_ca_cert,
+                ca_certs=self.config.tls_ca_certs,
                 certfile=self.config.tls_certfile,
                 keyfile=self.config.tls_keyfile,
             )
