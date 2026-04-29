@@ -18,7 +18,9 @@ def _make_app_context(mqtt_config: config.MqttConfig) -> AppContext:
 
 
 def _base_mqtt_config(**kwargs) -> config.MqttConfig:
-    return config.MqttConfig(host="localhost", username="test", password=SecretStr("test"), **kwargs)
+    return config.MqttConfig(
+        host="localhost", username="test", password=SecretStr("test"), **kwargs
+    )
 
 
 def test_tls_enabled_calls_tls_set():
